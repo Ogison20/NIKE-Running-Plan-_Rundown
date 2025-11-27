@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE Running Plan 拍攝通告單</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 設定字體與外觀 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght=400;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+        /* 自定義滾動條樣式 */
+        .scrollable-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .scrollable-content::-webkit-scrollbar-thumb {
+            background-color: #9ca3af;
+            border-radius: 20px;
+        }
+        /* 圖片點擊放大效果 (簡單版) */
+        .zoomable-img:active {
+            transform: scale(1.5);
+            transition: transform 0.2s;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- 主容器 -->
+    <div id="app" class="flex flex-col w-full max-w-lg mx-auto bg-white shadow-xl h-screen">
+
+        <!-- 頂部標題 -->
+        <header class="p-4 bg-gray-900 text-white shadow-lg rounded-b-xl sticky top-0 z-10">
+            <h1 class="text-xl font-bold tracking-tight">NIKE Running Plan 西門紅樓</h1>
+            <p class="text-xs opacity-75 mt-1">XIMEN RETAIL UNBOXING 拍攝手冊</p>
+        </header>
+
+        <!-- 頁籤導航 -->
+        <nav class="sticky top-[73px] bg-white border-b border-gray-200 z-10 shadow-md">
+            <div class="flex text-xs font-medium text-center text-gray-500">
+                <button data-tab="callsheet" class="tab-btn flex-1 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300 active-tab">
+                    通告資訊
+                </button>
+                <button data-tab="crew" class="tab-btn flex-1 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300">
+                    團隊名單
+                </button>
+                <button data-tab="rundown" class="tab-btn flex-1 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300">
+                    拍攝時程
+                </button>
+                <button data-tab="script" class="tab-btn flex-1 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300">
+                    腳本資料
+                </button>
+            </div>
+        </nav>
+
+        <!-- 內容區域 -->
+        <main class="flex-grow overflow-y-auto p-4 scrollable-content bg-gray-50">
+
+            <!-- 1. 通告資訊 (Call Sheet) -->
+            <div id="callsheet" class="tab-content space-y-4">
+                <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl shadow-inner">
+                    <h2 class="text-lg font-bold text-blue-800 mb-1">拍攝日期與集合時間</h2>
+                    <p id="shoot-date" class="text-2xl font-extrabold text-gray-900"></p>
+                    <p id="crew-call" class="text-sm font-semibold text-blue-700 mt-1"></p>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title text-orange-600">現場窗口聯絡人</h2>
+                    <div id="contacts-list" class="space-y-2"></div>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title text-green-600">地點資訊</h2>
+                    <div id="location-list" class="space-y-4"></div>
+                </div>
+            </div>
+
+            <!-- 2. 團隊名單 (Crew List) -->
+            <div id="crew" class="tab-content hidden">
+                <div id="crew-list" class="space-y-3"></div>
+            </div>
+
+            <!-- 3. 拍攝時程 (Rundown) -->
+            <div id="rundown" class="tab-content hidden">
+                <div class="border-l-4 border-gray-300 pl-4 space-y-6" id="rundown-timeline"></div>
+            </div>
+
+            <!-- 4. 腳本資料 (Script) - 已更新連結 -->
+            <div id="script" class="tab-content hidden h-full">
+                <div class="bg-white p-2 rounded-xl shadow h-[600px] flex flex-col">
+                    <h2 class="text-lg font-bold text-gray-800 mb-2 px-2">腳本投影片 (P.3-5)</h2>
+                    <p class="text-xs text-gray-500 mb-2 px-2">請直接在下方滑動查看第 3 至 5 頁內容。</p>
+                    
+                    <!-- Google Slides Embed (使用 Preview 模式, ID已更新) -->
+                    <div class="flex-grow relative w-full h-full bg-gray-200 rounded-lg overflow-hidden border border-gray-300">
+                        <iframe 
+                            src="https://docs.google.com/presentation/d/1gT99KfFqONDAGN_DsG2P6A1k3dLwgNHAhwilGeSQiX0/preview?rm=minimal" 
+                            frameborder="0" 
+                            width="100%" 
+                            height="100%" 
+                            allowfullscreen="true" 
+                            mozallowfullscreen="true" 
+                            webkitallowfullscreen="true">
+                        </iframe>
+                    </div>
+                    
+                    <a href="https://docs.google.com/presentation/d/1gT99KfFqONDAGN_DsG2P6A1k3dLwgNHAhwilGeSQiX0/edit" target="_blank" class="mt-3 block text-center bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700 transition">
+                        開啟完整 Google Slides
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JavaScript 腳本 -->
+    <script>
+        // --- 資料定義 ---
+        const callSheetData = {
+            project: "NIKE Running Plan西門紅樓",
+            date: "2025年12月1日 星期一",
+            crewCall: "08:45",
+            locations: [
+                { type: "第一現場 (Main Location)", name: "Nike 尚智西門紅樓店", address: "臺北市萬華區成都路12號", map: "https://maps.app.goo.gl/MqCHGmqYxj8b3PLeA" },
+                { type: "妝髮地點 (H/M Location)", name: "Happ.小樹屋|龍眼分館", address: "臺北市萬華區成都路67號5樓之1", map: "https://maps.app.goo.gl/Je89Yo2cxdzaTv1WA" },
+                { type: "停車點 (Parking)", name: "嘟嘟房台北西門站", address: "臺北市中正區中華路一段57號地下停車場", map: "https://maps.app.goo.gl/VtbLNFpKE6C7XUdy8" },
+            ],
+            contacts: [
+                { name: "承澔", phone: "0961-067-886" },
+                { name: "Ogison 阿樟", phone: "0975-488-645" }
+            ]
+        };
+
+        // --- 圖片設定區 ---
+        const images = {
+            "1.PNG": "./1.PNG",
+            "2.PNG": "./2.PNG",
+            "3.PNG": "./3.PNG",
+            "4.PNG": "./4.PNG",
+            "5.PNG": "./5.PNG",
+            "6.PNG": "./6.PNG",
+            "7.PNG": "./7.PNG",
+        };
+
+        // Rundown 數據
+        const rundownSchedule = [
+            { time: "07:30", event: "製片組/妝髮組抵達妝髮地點", personnel: "妝髮組-Lauren / 製片組-Ogison" },
+            { time: "08:00", event: "藝人抵達妝髮地點 & 梳化 (葉靜璇:08:00-09:00 / 何守正:09:00-09:30)", personnel: "NTC教練-何守正／Jing 葉靜璇" },
+            { time: "08:45", event: "劇組大隊抵達第一現場 & Setting", personnel: "製片組-承澔 / 導演組-Jason / 攝影組-Enzo/王逸丞/Harry/翁悅" },
+            { time: "09:30", event: "製片組/妝髮組/藝人組轉點至第一現場", personnel: "妝髮組-Lauren / 製片組-Ogison / NTC教練-何守正／Jing 葉靜璇" },
+            { time: "09:30", event: "開機 | 空景拍攝 (Running區/樓梯區/NBY區)", isImportant: true, personnel: "@ALL", images: [images["1.PNG"]] },
+            { time: "10:00", event: "片頭開場", personnel: "@ALL", images: [images["2.PNG"]] },
+            { time: "10:15", event: "Jing 介紹跑鞋 Part (2F女生跑鞋區)", personnel: "@ALL", images: [images["3.PNG"], images["4.PNG"]] },
+            { time: "10:40", event: "何守正介紹跑鞋 Part (1F男生跑鞋區)", personnel: "@ALL", images: [images["5.PNG"]] },
+            { time: "11:05", event: "兩人NBY區", personnel: "@ALL", images: [images["6.PNG"]] },
+            { time: "11:45", event: "Ending拍攝", personnel: "@ALL", images: [images["7.PNG"]] },
+            { time: "12:00", event: "撤收 / 檢查素材", isImportant: true, personnel: "@ALL" }
+        ];
+
+        const originalCrewList = [
+            { group: "NTC教練", name: "Jing 葉靜璇", callTime: "08:00", location: "妝髮地點", note: "自行前往" },
+            { group: "NTC教練", name: "何守正", callTime: "08:45", location: "妝髮地點", note: "自行前往" },
+            { group: "妝髮組", name: "Lauren", callTime: "07:30", location: "妝髮地點", note: "自行前往" },
+            { group: "製片組", name: "Ogison", callTime: "07:30", location: "妝髮地點", note: "自行前往" },
+            { group: "製片組", name: "承澔", callTime: "08:45", location: "第一現場", note: "後院車" },
+            { group: "導演組", name: "Jason", callTime: "08:45", location: "第一現場", note: "後院車" },
+            { group: "攝影組", name: "Enzo/王逸丞/Harry/翁悅", callTime: "08:45", location: "第一現場", note: "後院車" }
+        ];
+
+        const crewList = originalCrewList.sort((a, b) => a.callTime.localeCompare(b.callTime));
+
+        const timeToColor = {
+            "07:30": "border-pink-500",
+            "08:00": "border-green-500",
+            "08:45": "border-blue-500"
+        };
+        const ntcColor = "border-yellow-500";
+
+        // --- 渲染函式 ---
+
+        function renderCallSheet() {
+            document.getElementById('shoot-date').textContent = callSheetData.date;
+            document.getElementById('crew-call').textContent = `劇組集合時間: ${callSheetData.crewCall}`;
+            document.getElementById('contacts-list').innerHTML = callSheetData.contacts.map(contact => `
+                <a href="tel:${contact.phone.replace(/-/g, '')}" class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:bg-orange-50 transition duration-150">
+                    <span class="font-semibold text-gray-800">${contact.name}</span>
+                    <span class="flex items-center text-orange-600 font-mono">${contact.phone}<i class="fas fa-phone-alt ml-2"></i></span>
+                </a>
+            `).join('');
+            document.getElementById('location-list').innerHTML = callSheetData.locations.map(loc => `
+                <div class="bg-white p-4 rounded-xl shadow border-l-4 ${loc.type.includes('第一現場') ? 'border-green-500' : loc.type.includes('妝髮') ? 'border-pink-400' : 'border-gray-400'}">
+                    <p class="text-xs font-medium ${loc.type.includes('第一現場') ? 'text-green-600' : loc.type.includes('妝髮') ? 'text-pink-500' : 'text-gray-500'}">${loc.type}</p>
+                    <h3 class="text-base font-semibold text-gray-800 mt-1">${loc.name}</h3>
+                    <p class="text-sm text-gray-600">${loc.address}</p>
+                    <a href="${loc.map}" target="_blank" class="inline-flex items-center mt-3 text-sm font-medium text-blue-600 hover:text-blue-800 transition">
+                        查看地圖連結
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function renderRundown() {
+            const timelineHtml = rundownSchedule.map((item, index) => {
+                const isFinal = index === rundownSchedule.length - 1;
+                const isKey = item.isImportant || isFinal;
+                const timeColor = isKey ? 'bg-red-500' : 'bg-gray-700';
+                const textColor = isKey ? 'text-gray-900 font-semibold' : 'text-gray-700';
+                const borderClass = isKey ? 'border-red-500' : 'border-gray-300';
+                const personnelTag = item.personnel ? `<div class="text-xs mt-2 pt-2 border-t border-gray-100 text-gray-500"><span class="font-medium text-red-500 mr-1">@</span>${item.personnel}</div>` : '';
+                
+                let imagesHtml = '';
+                if (item.images && item.images.length > 0) {
+                    const gridClass = item.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1';
+                    imagesHtml = `
+                        <div class="mt-3 grid ${gridClass} gap-2">
+                            ${item.images.map(img => `
+                                <img src="${img}" class="zoomable-img w-full h-auto rounded-lg border border-gray-200 object-cover shadow-sm" alt="參考圖片">
+                            `).join('')}
+                        </div>
+                    `;
+                }
+
+                return `
+                    <div class="relative pb-8 group">
+                        <div class="absolute top-0 -left-1.5 h-full w-0.5 ${isFinal ? '' : 'group-hover:bg-red-400 transition'} bg-gray-200"></div>
+                        <div class="absolute top-0 -left-2.5 w-5 h-5 rounded-full ${timeColor} flex items-center justify-center text-xs text-white shadow-md transform group-hover:scale-110 transition duration-200">
+                            ${item.time.split(':')[0]}
+                        </div>
+                        <div class="ml-4 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-200 border-l-4 ${borderClass}">
+                            <div class="text-sm font-bold text-gray-900">${item.time}</div>
+                            <p class="text-base mt-1 ${textColor}">${item.event}</p>
+                            ${imagesHtml}
+                            ${personnelTag}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('rundown-timeline').innerHTML = timelineHtml;
+        }
+
+        function renderCrewList() {
+            const crewHtml = crewList.map(crew => {
+                let colorClass = timeToColor[crew.callTime] || 'border-gray-400';
+                if (crew.group === "NTC教練") colorClass = ntcColor;
+                const noteBgClass = crew.note.includes('後院車') ? 'bg-indigo-100 text-indigo-800' : 'bg-green-100 text-green-800';
+
+                return `
+                    <div class="flex items-center p-3 bg-white rounded-xl shadow-md border-l-4 ${colorClass}">
+                        <div class="w-16 h-16 flex-shrink-0 mr-4 rounded-full bg-gray-100 flex items-center justify-center text-2xl text-gray-500 font-bold overflow-hidden">
+                            ${crew.group === 'NTC教練' ? 'NTC' : crew.group.charAt(0)}
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-xs font-medium text-gray-500">${crew.group}</p>
+                            <h3 class="text-lg font-bold text-gray-900">${crew.name}</h3>
+                            <div class="flex flex-wrap text-xs mt-1 space-x-2">
+                                ${crew.callTime !== 'N/A' ? `<span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full">集合: ${crew.callTime}</span>` : ''}
+                                ${crew.location !== 'N/A' ? `<span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">${crew.location}</span>` : ''}
+                                ${crew.note ? `<span class="${noteBgClass} px-2 py-0.5 rounded-full">${crew.note}</span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('crew-list').innerHTML = crewHtml;
+        }
+
+        function setupTabs() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active-tab');
+                        btn.classList.add('border-transparent');
+                    });
+                    tabContents.forEach(content => content.classList.add('hidden'));
+                    button.classList.add('active-tab');
+                    button.classList.remove('border-transparent');
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
+            document.querySelector('.tab-btn[data-tab="callsheet"]').classList.add('active-tab');
+        }
+
+        window.onload = function() {
+            renderCallSheet();
+            renderRundown();
+            renderCrewList();
+            setupTabs();
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                .card { padding: 16px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; }
+                .section-title { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid; }
+                .active-tab { color: #111827; border-bottom-color: #EF4444; }
+            `;
+            document.head.appendChild(style);
+        };
+    </script>
+</body>
+</html>
