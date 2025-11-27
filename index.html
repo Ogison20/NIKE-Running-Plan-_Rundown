@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-TW"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;NIKE Running Plan 拍攝通告單&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 載入 Tailwind CSS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 設定字體與外觀 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Sans+TC:wght@400;700&amp;display=swap');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Noto Sans TC', 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f7f9;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 自定義滾動條樣式，使其在移動設備上更美觀 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scrollable-content::-webkit-scrollbar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scrollable-content::-webkit-scrollbar-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #9ca3af;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="min-h-screen flex flex-col antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 主容器 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="app" class="flex flex-col w-full max-w-lg mx-auto bg-white shadow-xl h-screen"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 頂部標題和專案名稱 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="p-4 bg-gray-900 text-white shadow-lg rounded-b-xl sticky top-0 z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-xl font-bold tracking-tight"&gt;NIKE Running Plan 西門紅樓&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs opacity-75 mt-1"&gt;XIMEN RETAIL UNBOXING 拍攝手冊&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 頁籤導航 (位置已對調) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="sticky top-[73px] bg-white border-b border-gray-200 z-10 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex text-sm font-medium text-center text-gray-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button data-tab="callsheet" class="tab-btn w-1/3 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300 active-tab"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>通告資訊</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button data-tab="crew" class="tab-btn w-1/3 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>團隊名單</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button data-tab="rundown" class="tab-btn w-1/3 py-3 border-b-2 border-transparent transition duration-300 hover:text-gray-900 hover:border-gray-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>拍攝時程</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 內容區域 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;main class="flex-grow overflow-y-auto p-4 scrollable-content"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 1. 通告資訊 (Call Sheet) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="callsheet" class="tab-content space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-blue-50 border border-blue-200 p-4 rounded-xl shadow-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-lg font-bold text-blue-800 mb-1"&gt;拍攝日期與集合時間&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p id="shoot-date" class="text-2xl font-extrabold text-gray-900"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p id="crew-call" class="text-sm font-semibold text-blue-700 mt-1"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- 現場窗口 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="section-title text-orange-600"&gt;現場窗口聯絡人&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="contacts-list" class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Contacts will be injected here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- 地點資訊 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="section-title text-green-600"&gt;地點資訊&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="location-list" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Locations will be injected here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 2. 團隊名單 (Crew List) (已與 Rundown 對調位置) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="crew" class="tab-content hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="crew-list" class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Crew members will be injected here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 3. 拍攝時程 (Rundown) (已與 Crew 對調位置) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="rundown" class="tab-content hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="border-l-4 border-gray-300 pl-4 space-y-6" id="rundown-timeline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Rundown items will be injected here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- JavaScript 腳本 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- 資料定義 (Data Definition) ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const callSheetData = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>project: "NIKE Running Plan西門紅樓",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>date: "2025年12月1日 星期一",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>crewCall: "08:45",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>locations: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: "第一現場 (Main Location)",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "Nike 尚智西門紅樓店",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>address: "臺北市萬華區成都路12號",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>map: "https://maps.app.goo.gl/MqCHGmqYxj8b3PLeA"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: "妝髮地點 (H/M Location)",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "Happ.小樹屋|龍眼分館",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>address: "臺北市萬華區成都路67號5樓之1",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>map: "https://maps.app.goo.gl/Je89Yo2cxdzaTv1WA"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: "停車點 (Parking)",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "嘟嘟房台北西門站",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>address: "臺北市中正區中華路一段57號地下停車場",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>map: "https://maps.app.goo.gl/VtbLNFpKE6C7XUdy8"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>contacts: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ name: "承澔", phone: "0961-067-886" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ name: "Ogison 阿樟", phone: "0975-488-645" }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 更新後的 Rundown 數據：妝髮組/製片組的集合時間改為 07:30</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const rundownSchedule = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "07:30", event: "製片組/妝髮組抵達妝髮地點", personnel: "妝髮組-Lauren / 製片組-Ogison" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "08:00", event: "藝人抵達妝髮地點 &amp; 梳化 (葉靜璇:08:00-09:00 / 何守正:09:00-09:30)", personnel: "NTC教練-何守正／Jing 葉靜璇" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "08:45", event: "劇組大隊抵達第一現場 &amp; Setting", personnel: "製片組-承澔 / 導演組-Jason / 攝影組-Enzo/王逸丞/Harry/翁悅" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "09:30", event: "製片組/妝髮組/藝人組轉點至第一現場", personnel: "妝髮組-Lauren / 製片組-Ogison / NTC教練-何守正／Jing 葉靜璇" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "09:30", event: "開機 | 空景拍攝 (Running區/樓梯區/NBY區)", isImportant: true, personnel: "@ALL" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "10:00", event: "片頭開場", personnel: "@ALL" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "10:15", event: "Jing 介紹跑鞋 Part (2F女生跑鞋區)", personnel: "@ALL" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "10:40", event: "何守正介紹跑鞋 Part (1F男生跑鞋區)", personnel: "@ALL" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "11:05", event: "兩人NBY區", personnel: "@ALL" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "11:45", event: "Ending拍攝", personnel: "@ALL" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ time: "12:00", event: "撤收 / 檢查素材", isImportant: true, personnel: "@ALL" }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 更新後的 Crew List 數據：Lauren, Ogison 的集合時間改為 07:30</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const originalCrewList = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "NTC教練", name: "Jing 葉靜璇", callTime: "08:00", location: "妝髮地點", note: "自行前往" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "NTC教練", name: "何守正", callTime: "08:45", location: "妝髮地點", note: "自行前往" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "妝髮組", name: "Lauren", callTime: "07:30", location: "妝髮地點", note: "自行前往" }, // 時間已更新</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "製片組", name: "Ogison", callTime: "07:30", location: "妝髮地點", note: "自行前往" }, // 時間已更新</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "製片組", name: "承澔", callTime: "08:45", location: "第一現場", note: "後院車" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "導演組", name: "Jason", callTime: "08:45", location: "第一現場", note: "後院車" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ group: "攝影組", name: "Enzo/王逸丞/Harry/翁悅", callTime: "08:45", location: "第一現場", note: "後院車" }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 排序：從早到晚</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const crewList = originalCrewList.sort((a, b) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return a.callTime.localeCompare(b.callTime);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 集合時間與顏色對應 (已更新 07:30 的顏色)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const timeToColor = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"07:30": "border-pink-500", // Lauren &amp; Ogison (新時間)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"08:00": "border-green-500", // Jing</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"08:45": "border-blue-500"<span class="Apple-converted-space">  </span>// 何守正, 承澔, Jason, 攝影組</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ntcColor = "border-yellow-500"; // NTC 教練專用顏色</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- 輔助函式 (Utility Functions) ---</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/** 渲染通告資訊 (Call Sheet) */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderCallSheet() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('shoot-date').textContent = callSheetData.date;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('crew-call').textContent = `劇組集合時間: ${callSheetData.crewCall}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 渲染聯絡人</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const contactsHtml = callSheetData.contacts.map(contact =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="tel:${contact.phone.replace(/-/g, '')}" class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:bg-orange-50 transition duration-150"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="font-semibold text-gray-800"&gt;${contact.name}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="flex items-center text-orange-600 font-mono"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>${contact.phone}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"&gt;&lt;/path&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('contacts-list').innerHTML = contactsHtml;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 渲染地點</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const locationsHtml = callSheetData.locations.map(loc =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-4 rounded-xl shadow border-l-4 ${loc.type.includes('第一現場') ? 'border-green-500' : loc.type.includes('妝髮') ? 'border-pink-400' : 'border-gray-400'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs font-medium ${loc.type.includes('第一現場') ? 'text-green-600' : loc.type.includes('妝髮') ? 'text-pink-500' : 'text-gray-500'}"&gt;${loc.type}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-base font-semibold text-gray-800 mt-1"&gt;${loc.name}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600"&gt;${loc.address}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="${loc.map}" target="_blank" class="inline-flex items-center mt-3 text-sm font-medium text-blue-600 hover:text-blue-800 transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.244-4.243a8 8 0 1111.314 0z"&gt;&lt;/path&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"&gt;&lt;/path&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>查看地圖連結</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('location-list').innerHTML = locationsHtml;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/** 渲染拍攝時程 (Rundown) */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderRundown() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const timelineHtml = rundownSchedule.map((item, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const isFinal = index === rundownSchedule.length - 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const isKey = item.isImportant || isFinal;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const timeColor = isKey ? 'bg-red-500' : 'bg-gray-700';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const textColor = isKey ? 'text-gray-900 font-semibold' : 'text-gray-700';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const borderClass = isKey ? 'border-red-500' : 'border-gray-300';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// 渲染人員標註</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const personnelTag = item.personnel ? `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-xs mt-2 pt-2 border-t border-gray-100 text-gray-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="font-medium text-red-500 mr-1"&gt;@&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>${item.personnel}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>` : '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative pb-8 group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- 時間點標記 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-0 -left-1.5 h-full w-0.5 ${isFinal ? '' : 'group-hover:bg-red-400 transition'} bg-gray-200"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-0 -left-2.5 w-5 h-5 rounded-full ${timeColor} flex items-center justify-center text-xs text-white shadow-md transform group-hover:scale-110 transition duration-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${item.time.split(':')[0]}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- 內容卡片 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="ml-4 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-200 border-l-4 ${borderClass}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="text-sm font-bold text-gray-900"&gt;${item.time}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-base mt-1 ${textColor}"&gt;${item.event}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${personnelTag}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}).join('');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('rundown-timeline').innerHTML = timelineHtml;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/** 渲染團隊名單 (Crew List) */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderCrewList() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const crewHtml = crewList.map(crew =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// 根據集合時間或組別設定邊框顏色</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let colorClass = timeToColor[crew.callTime] || 'border-gray-400';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (crew.group === "NTC教練") {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>colorClass = ntcColor;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// 根據交通方式設定標籤顏色</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const noteBgClass = crew.note.includes('後院車') ? 'bg-indigo-100 text-indigo-800' : 'bg-green-100 text-green-800';</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center p-3 bg-white rounded-xl shadow-md border-l-4 ${colorClass}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-16 h-16 flex-shrink-0 mr-4 rounded-full bg-gray-100 flex items-center justify-center text-2xl text-gray-500 font-bold overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 顯示組別縮寫或名稱 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${crew.group === 'NTC教練' ? 'NTC' : crew.group.charAt(0)}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-grow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs font-medium text-gray-500"&gt;${crew.group}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-lg font-bold text-gray-900"&gt;${crew.name}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex flex-wrap text-xs mt-1 space-x-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>${crew.callTime !== 'N/A' ? `&lt;span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full"&gt;集合: ${crew.callTime}&lt;/span&gt;` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>${crew.location !== 'N/A' ? `&lt;span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full"&gt;${crew.location}&lt;/span&gt;` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>${crew.note ? `&lt;span class="${noteBgClass} px-2 py-0.5 rounded-full"&gt;${crew.note}&lt;/span&gt;` : ''}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}).join('');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('crew-list').innerHTML = crewHtml;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/** 頁籤切換邏輯 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function setupTabs() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tabButtons = document.querySelectorAll('.tab-btn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tabContents = document.querySelectorAll('.tab-content');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>tabButtons.forEach(button =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const targetTab = button.dataset.tab;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// 移除所有 active 狀態</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>tabButtons.forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>btn.classList.remove('active-tab');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>btn.classList.add('border-transparent');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>tabContents.forEach(content =&gt; content.classList.add('hidden'));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// 啟用點擊的頁籤</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.add('active-tab');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.remove('border-transparent');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById(targetTab).classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 初始設定第一個頁籤的樣式</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelector('.tab-btn[data-tab="callsheet"]').classList.add('active-tab');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- 初始化 (Initialization) ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.onload = function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 載入所有資料到 DOM</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderCallSheet();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderRundown();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderCrewList();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 設定頁籤外觀</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setupTabs();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 為了讓 active-tab 的 border 顏色正確，在所有渲染完成後再設定一次</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const style = document.createElement('style');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>style.textContent = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>background-color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>border: 1px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>font-size: 1.125rem; /* text-lg */</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>font-weight: 700; /* font-bold */</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>margin-bottom: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>padding-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>border-bottom: 2px solid;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>.active-tab {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>color: #111827; /* text-gray-900 */</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>border-bottom-color: #EF4444; /* border-red-500 */</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.head.appendChild(style);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
